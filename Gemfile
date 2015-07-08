@@ -43,3 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'sufia', '6.1.0'
+gem 'kaminari', github: 'jcoyne/kaminari', branch: 'sufia'  # required to handle pagination properly in dashboard. See https://github.com/amatsuda/kaminari/pull/322
