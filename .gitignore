@@ -15,3 +15,12 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore jetty container
+jetty
+
+# Ignore redis dump
+dump.rdb
+
+# Ignore nohup output
+nohup.out
