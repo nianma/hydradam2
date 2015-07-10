@@ -41,17 +41,15 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 3.3.2'
+  gem 'jettywrapper', '~> 2.0.3'
 end
 
-gem 'sufia', '6.2.0'
+gem 'sufia', '~> 6.2.0'
 gem 'kaminari', github: 'jcoyne/kaminari', branch: 'sufia'  # required to handle pagination properly in dashboard. See https://github.com/amatsuda/kaminari/pull/322
 
 gem 'rsolr', '~> 1.0.6'
-gem 'devise'
+gem 'devise', '~> 3.5'
 gem 'devise-guests', '~> 0.3'
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'jettywrapper'
-end
-
-gem "hydra-role-management"
+gem "hydra-role-management", '~> 0.2'
