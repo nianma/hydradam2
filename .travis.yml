@@ -18,7 +18,8 @@ env:
 # services:
 #   - redis-server
 
-# before_script:
+before_script:
+  - jdk_switcher use oraclejdk8
 #   - "cp config/database.yml.sample config/database.yml"
 #   - "cp config/redis.yml.sample config/redis.yml"
 #   - "cp config/initializers/devise.rb.sample config/initializers/devise.rb"
