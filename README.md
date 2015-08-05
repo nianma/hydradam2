@@ -33,6 +33,7 @@ HydraDAM requires the following software to work:
 1. [ImageMagick](http://www.imagemagick.org/) for thumbnail generation.
 1. FITS for file characterization.
 1. FFMPEG for audio-visual transcoding.
+1. Nodejs for javascript runtime.
 
 > **NOTE:** If you do not already have Solr and Fedora instances you can use in your
 > development environment, you may use hydra-jetty (instructions are provided
@@ -69,11 +70,22 @@ rake sufia:jetty:config
 
 ## Install Redis
 
-**TODO**
+1. download redis-3.0.2.tar.gz
+2. tar xzf redis-3.0.2.tar.gz
+3. cd redis-3.0.2 
+4. make
+5. sudo make install
 
 ## Install ImageMagick
 
-**TODO**
+1. Download ImageMagick.tar.gz
+2. tar xvzf ImageMagick.tar.gz
+3. cd ImageMagick-6.9.1
+4. ./configure
+5. make
+6. sudo make install
+7. You may need to configure the dynamic linker run-time bindings: sudo ldconfig /usr/local/lib
+8. Finally, verify the ImageMagick install worked properly: convert -version
 
 ## Install FITS
 
@@ -140,5 +152,9 @@ QUEUE=* rake environment resque:work
 or run them in the background.
 
 # Deploying
-
+ 
 TODO
+
+# Problems you may have while installation:
+1. when start jetty, go to http://locahost:8983/solr, returns 404 error, you may need to check your java version, make sure you are using java 8.
+2. Make sure you are using latest Rails version
